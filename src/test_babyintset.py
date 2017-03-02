@@ -55,7 +55,9 @@ def test_get_max():
     assert 0 != 0
 
 def test_sortme():
-    assert 0 != 0
+    bset = BabyIntegerSet([5, 7, 1, 3])
+    bset.sortme()
+    assert (bset.dump_data()) == [1, 3, 5, 7]
 
 def test_remove_seq():
     assert 0 != 0
