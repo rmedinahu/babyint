@@ -45,8 +45,9 @@ def test_size():
 def test_sum_all():
     assert 0 != 0
 
-def test_factorial():
-    assert 0 != 0
+def test_factorial(): # JTMedina
+    bset = BabyIntegerSet([1, 3, 5, 7])
+    assert bset.product_all() == 105
 
 def test_get_min():
     assert 0 != 0
