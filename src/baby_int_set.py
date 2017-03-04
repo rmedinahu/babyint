@@ -95,7 +95,7 @@ class BabyIntegerSet:
 		pass
 
 	def remove_all_odds(self):
-		return[x for x in self if x % 2 == 0]
+		pass
 
 # End of class BabyIntegerSet
 
