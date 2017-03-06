@@ -82,7 +82,8 @@ class BabyIntegerSet:
 
 	def get_max(self):
 		"""Returns the largest integer in the set."""
-		pass
+		m = max(self.__data)
+		return m
 
 	def sortme(self):
 		"""Returns a copy of the set sorted. See python's sorted method."""

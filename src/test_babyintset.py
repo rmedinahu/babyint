@@ -52,7 +52,8 @@ def test_get_min():
     assert 0 != 0
 
 def test_get_max():
-    assert 0 != 0
+    bset = BabyIntegerSet([1, 3, 5, 4])
+    assert(bset.get_max()) == 5
 
 def test_sortme():
     assert 0 != 0
