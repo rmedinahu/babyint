@@ -31,7 +31,8 @@ def test_addSeq():
     assert len(bset.dump_data()) == 4
 
 def test_remove():
-    assert 0 != 0
+    bset = BabyIntegerSet([1, 3, 5, 3])
+    assert bset.remove(3) == [1, 5]
 
 def test_get():
     assert 0 != 0
