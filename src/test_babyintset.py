@@ -52,7 +52,8 @@ def test_factorial(): # JTMedina
     assert bset.product_all() == 105
 
 def test_get_min():
-    assert 0 != 0
+    bset = BabyIntegerSet([3, 2, 4, 5, 6, 7])
+    assert bset.get_min() == 2
 
 def test_get_max():
     bset = BabyIntegerSet([1, 3, 5, 4])

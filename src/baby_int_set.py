@@ -80,7 +80,7 @@ class BabyIntegerSet:
 
 	def get_min(self):
 		"""Returns the smallest integer in the set."""
-		pass
+		return min(self.__data)
 
 	def get_max(self):
 		"""Returns the largest integer in the set."""
