@@ -105,10 +105,13 @@ class BabyIntegerSet:
 		each removal in try/except block.
 		"""
 		pass
-
 	def remove_all_odds(self):
-		for i in self.__data:
-			if i % 2 != 0:
-				self.__data.remove(i)
+		list1 = []
+		for i in range(len(self.__data)):
+			if self.__data[i] % 2 != 0:
+				list1.append(self.__data[i])
+		for i in list1:
+			self.__data.remove(i)
+
 		return self.__data
 	# End of class BabyIntegerSet
