@@ -67,7 +67,7 @@ class BabyIntegerSet:
 
 	def clear(self):
 		"""Remove all elements from the set."""
-		pass
+		self.__data = []
 
 	def size(self):
 		"""Returns the size of the set."""

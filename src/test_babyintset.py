@@ -38,7 +38,9 @@ def test_get():
     assert 0 != 0
 
 def test_clear():
-    assert 0 != 0
+    bset = BabyIntegerSet([1, 4, 7])
+    bset.clear()
+    assert len(bset.dump_data()) == 0
 
 def test_size():
     assert 0 != 0
