@@ -36,8 +36,8 @@ class BabyIntegerSet:
 
 		for i in self.__data:
 			if i == elem:
-				return # Nothing to add, elem already exists
-
+				return None
+		
 		self.__data.append(elem)
 
 	def addSeq(self, seq):
@@ -74,7 +74,7 @@ class BabyIntegerSet:
 
 	def size(self):
 		"""Returns the size of the set."""
-		pass
+		return len(self.__data);
 
 	def sum_all(self):
 		"""Returns the sum of all integers in the set."""
@@ -111,5 +111,4 @@ class BabyIntegerSet:
 			if i % 2 != 0:
 				self.__data.remove(i)
 		return self.__data
-				
-# End of class BabyIntegerSet
+	# End of class BabyIntegerSet
