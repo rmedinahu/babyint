@@ -95,7 +95,7 @@ class BabyIntegerSet:
 
 	def sortme(self):
 		"""Returns a copy of the set sorted. See python's sorted method."""
-		pass
+		self.__data = sorted(self.__data)
 
 	def remove_seq(self, seq):
 		"""Removes each item in seq from set. Make sure to enclose
