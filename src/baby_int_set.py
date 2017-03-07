@@ -47,11 +47,17 @@ class BabyIntegerSet:
 			self.add(i)
 
 	def remove(self, elem):
-         try:
-            self.__data.remove(elem)
-         except:
-            raise KeyError
+		"""Removes and returns the element elem from the set. 
 
+		Raises KeyError if elem is not contained in the set.
+		"""
+		for i in self.__data:
+			try:
+				self.__data.remove(elem)
+			except ValueError:
+				return self.__data
+		return self.__data
+		
 	def get(self, elem):
 		"""Returns element elem from the set.
 

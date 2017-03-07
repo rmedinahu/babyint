@@ -31,9 +31,8 @@ def test_addSeq():
     assert len(bset.dump_data()) == 4
 
 def test_remove():
-    bset = BabyIntegerSet([1, 3, 5, 7])
-    with pytest.raises(KeyError):
-        bset.remove(11)
+    bset = BabyIntegerSet([1, 3, 5, 3])
+    assert bset.remove(3) == [1, 5]
 
 def test_get():
     assert 0 != 0
