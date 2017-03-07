@@ -36,7 +36,7 @@ class BabyIntegerSet:
 		
 		for i in self.__data:
 			if i == elem:
-				return # Nothing to add, elem already exists
+				return None
 		
 		self.__data.append(elem)
 
@@ -66,7 +66,7 @@ class BabyIntegerSet:
 
 	def size(self):
 		"""Returns the size of the set."""
-		pass
+		return len(self.__data);
 
 	def sum_all(self):
 		"""Returns the sum of all integers in the set."""
@@ -95,7 +95,6 @@ class BabyIntegerSet:
 		pass
 
 	def remove_all_odds(self):
-		"""Removes all odd numbers from the set."""
 		pass
 
 # End of class BabyIntegerSet
