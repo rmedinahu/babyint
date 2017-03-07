@@ -95,8 +95,11 @@ class BabyIntegerSet:
 		pass
 
 	def remove_all_odds(self):
-		"""Removes all odd numbers from the set."""
-		pass
+		for i in self.__data:
+			if i % 2 != 0:
+				self.__data.remove(i)
+		return self.__data
+				
 
 # End of class BabyIntegerSet
 
