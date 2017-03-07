@@ -74,7 +74,10 @@ class BabyIntegerSet:
 
 	def product_all(self):
 		"""Returns the product of all integers in the set."""
-		pass
+		result = 1
+		for i in self.__data:
+			result *= i
+		return result
 
 	def get_min(self):
 		"""Returns the smallest integer in the set."""
