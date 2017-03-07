@@ -4,11 +4,11 @@ class UnsupportedTypeError(Exception):
     def __init__(self, value):
         self.value = value
     def __str__(self):
-        return repr(self.value) 
+        return repr(self.value)
 
 
 class BabyIntegerSet:
-	"""A class the mimics the behavior of python's built in 
+	"""A class the mimics the behavior of python's built in
 	Set class. Implemented as a list. Can only store integers."""
 
 	def __init__(self, d=[]):
@@ -26,40 +26,39 @@ class BabyIntegerSet:
 		return self.__data
 
 	def add(self, elem):
-		"""Add element elem to the set only if it is 
-		unique to the set. 
+		"""Add element elem to the set only if it is
+		unique to the set.
 
 		Raises UnsupportedTypeError if elem is not type int.
 		"""
 		if type(elem) != int:
 			raise UnsupportedTypeError(str(elem) + ' is not a valid integer.')
-		
+
 		for i in self.__data:
 			if i == elem:
 				return # Nothing to add, elem already exists
-		
+
 		self.__data.append(elem)
 
 	def addSeq(self, seq):
-		"""Add contents of seq to the set where each item in contents 
+		"""Add contents of seq to the set where each item in contents
 		is unique to the set."""
 		for i in seq:
 			self.add(i)
 
 	def remove(self, elem):
-		"""Removes and returns the element elem from the set. 
-
-		Raises KeyError if elem is not contained in the set.
-		"""
-		pass
+         try:
+            self.__data.remove(elem)
+         except:
+            raise KeyError
 
 	def get(self, elem):
-		"""Returns element elem from the set. 
+		"""Returns element elem from the set.
 
 		Raises KeyError if elem is not contained in the set.
 		"""
 		pass
-	
+
 	def clear(self):
 		"""Remove all elements from the set."""
 		pass
@@ -104,6 +103,3 @@ class BabyIntegerSet:
 		return self.__data
 				
 # End of class BabyIntegerSet
-
-
-

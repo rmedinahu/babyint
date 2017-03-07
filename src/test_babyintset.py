@@ -24,14 +24,16 @@ def test_add():
     bset = BabyIntegerSet([1, 3, 5, 3])
     bset.add(3)
     assert len(bset.dump_data()) == 3
-    
+
 def test_addSeq():
     bset = BabyIntegerSet([1, 3, 5, 3])
     bset.addSeq([1, 3, 5, 7])
     assert len(bset.dump_data()) == 4
 
 def test_remove():
-    assert 0 != 0
+    bset = BabyIntegerSet([1, 3, 5, 7])
+    with pytest.raises(KeyError):
+        bset.remove(11)
 
 def test_get():
     assert 0 != 0
