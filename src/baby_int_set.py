@@ -63,8 +63,11 @@ class BabyIntegerSet:
 
 		Raises KeyError if elem is not contained in the set.
 		"""
-		pass
-
+		try:
+			return self.__data[self.__data.index(elem)]
+		except ValueError:
+			raise KeyError
+	
 	def clear(self):
 		"""Remove all elements from the set."""
 		self.__data = []

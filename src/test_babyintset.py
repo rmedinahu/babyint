@@ -35,8 +35,11 @@ def test_remove():
     assert bset.remove(3) == [1, 5]
 
 def test_get():
-    assert 0 != 0
-
+    baby = BabyIntegerSet([2,4,4])
+    with pytest.raises(KeyError):
+         baby.get(1)
+    baby.get(2)
+        
 def test_clear():
     bset = BabyIntegerSet([1, 4, 7])
     bset.clear()
