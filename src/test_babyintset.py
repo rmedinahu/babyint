@@ -62,5 +62,5 @@ def test_remove_seq():
 
 def test_remove_all_odds():
     bset = BabyIntegerSet([1, 3, 5, 3])
-    bset.remove_all_odds
+    bset.remove_all_odds()
     assert len(bset.dump_data()) == 0
