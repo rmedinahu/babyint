@@ -100,7 +100,6 @@ class BabyIntegerSet:
 				self.__data.remove(i)
 		return self.__data
 				
-
 # End of class BabyIntegerSet
 
 
