@@ -89,10 +89,14 @@ class BabyIntegerSet:
 		pass
 
 	def remove_seq(self, seq):
-		"""Removes each item in seq from set. Make sure to enclose
-		each removal in try/except block.
-		"""
-		pass
+		#"""Removes each item in seq from set. Make sure to enclose
+		#each removal in try/except block."""
+
+		try:
+			self._data.remove()
+		except ValueError:
+			pass 
+			
 
 	def remove_all_odds(self):
 		"""Removes all odd numbers from the set."""
